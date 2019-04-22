@@ -6,7 +6,7 @@
  * @version (a version number or a date)
  */
 public class FilterToHighEvictionRate implements FilterPredicate<Row> {
-  private final double HIGH_RATE = 0.5;
+  private final double HIGH_RATE = 5;
   public boolean apply(Row element) {
     return element.getDataValue("evictionRate")>HIGH_RATE;
   }

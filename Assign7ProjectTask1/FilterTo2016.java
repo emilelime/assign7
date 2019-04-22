@@ -8,6 +8,6 @@
 public class FilterTo2016 implements FilterPredicate<Row> {
   private final int YEAR = 2016;
   public boolean apply(Row element) {
-    return element.getDataValue("year")==YEAR;
+    return element.getYear()==YEAR;
   }
 }
