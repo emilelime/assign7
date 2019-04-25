@@ -1,0 +1,7 @@
+#BlueJ class context
+comment0.target=AsianComparator
+comment0.text=\n\ Write\ a\ description\ of\ class\ AsianComparator\ here.\n\n\ @author\ (your\ name)\n\ @version\ (a\ version\ number\ or\ a\ date)\n
+comment1.params=row1\ row2
+comment1.target=int\ compare(Row,\ Row)
+comment1.text=\n\ //implements\ compare(),\ returns\ 0\ or\ -1\ or\ 1\ finish\ this\n
+numComments=2

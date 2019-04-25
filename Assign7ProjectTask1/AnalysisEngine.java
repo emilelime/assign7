@@ -57,20 +57,34 @@ public class AnalysisEngine {
             // + subsetLowEviction.get(4) + "\n"); 
 
             //3. test on smaller datasets, test on odds, evens
-            int totalNumElts = subset2016.size();
-            System.out.println("2016 dataset size: " + totalNumElts);
-            if (totalNumElts % 2 == 0) {
-                String evenMedianCity1 = (subset2016.get(getMedian(subset2016))).getName();
-                String evenMedianCity2 = (subset2016.get(getMedian(subset2016)-1)).getName();
-                double evenMedianEvictionRate = (subset2016.get(getMedian(subset2016))).getDataValue("evictionRate");
-                System.out.println("The two cities with median eviction rates are: " + evenMedianCity1 + " and " + evenMedianCity2 + "\n" + 
-                    " with an average median rate of " + evenMedianEvictionRate);
-            } else {
-                String oddMedianCity = (subset2016.get(getMedian(subset2016))).getName();
-                double oddMedianEvictionRate = (subset2016.get(getMedian(subset2016))).getDataValue("evictionRate");
-                System.out.println("The city with median eviction rate is: " + oddMedianCity + "\n" + 
-                    " with a rate of " + oddMedianEvictionRate);
-            }
+            // int totalNumElts = subset2016.size();
+            // System.out.println("2016 dataset size: " + totalNumElts);
+            // if (totalNumElts % 2 == 0) {
+                // String evenMedianCity1 = (subset2016.get(getMedian(subset2016))).getName();
+                // String evenMedianCity2 = (subset2016.get(getMedian(subset2016)-1)).getName();
+                // double evenMedianEvictionRate = (subset2016.get(getMedian(subset2016))).getDataValue("evictionRate");
+                // System.out.println("The two cities with median eviction rates are: " + evenMedianCity1 + " and " + evenMedianCity2 + "\n" + 
+                    // " with an average median rate of " + evenMedianEvictionRate);
+            // } else {
+                // String oddMedianCity = (subset2016.get(getMedian(subset2016))).getName();
+                // double oddMedianEvictionRate = (subset2016.get(getMedian(subset2016))).getDataValue("evictionRate");
+                // System.out.println("The city with median eviction rate is: " + oddMedianCity + "\n" + 
+                    // " with a rate of " + oddMedianEvictionRate);
+            // }
+            
+            //4.
+            
+            FilterableDataset subsetHighAsianPerc = fs.filterBy(new FilterToHighAsianPerc());
+            //System.out.println(subsetLowEviction);
+            Sorting.selectionSort(subsetHighAsianPerc, new AsianComparator());
+            //System.out.println(subsetLowEviction); //? so many w zero -> cant test if method is right?
+            System.out.println("5 cities in 2016 with highest Asian percentage:\n" 
+            + subsetHighAsianPerc.get(0) + "\n"
+            + subsetHighAsianPerc.get(1) + "\n"
+            + subsetHighAsianPerc.get(2) + "\n"
+            + subsetHighAsianPerc.get(3) + "\n" //? how to get range of rows rather than one at a time?/
+            + subsetHighAsianPerc.get(4) + "\n"); 
+
 
         } catch(IOException e) {
             System.out.println(e);
