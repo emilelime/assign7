@@ -1,6 +1,7 @@
 #BlueJ class context
 comment0.target=FilterToLowEvictionRate
-comment0.text=\n\ Write\ a\ description\ of\ class\ FilterToLowEvictionRate\ here.\n\n\ @author\ (your\ name)\n\ @version\ (a\ version\ number\ or\ a\ date)\n
+comment0.text=\n\ FilterToLowEvictionRate\ can\ be\ used\ to\ filter\ a\ dataset\ by\ eviction\ rate\ for\ values\ that\ are\ less\n\ than\ a\ set\ threshold.\ \n\n\ @author\ Emily\ Yin,\ Shirley\ Lei\n\ @version\ 4/24/2019\n
 comment1.params=element
 comment1.target=boolean\ apply(Row)
+comment1.text=\n\ Determines\ whether\ the\ eviction\ rate\ in\ a\ row\ is\ less\ than\ the\ threshold\ for\ a\ low\ eviction\ rate.\n\ \ \n\ @param\ element\ the\ row\ to\ be\ filtered\ through\ for\ its\ eviction\ rate\n\ @return\ boolean\ true\ if\ the\ eviction\ rate\ is\ less\ than\ the\ set\ threshold\ in\ this\ given\ row\n
 numComments=2

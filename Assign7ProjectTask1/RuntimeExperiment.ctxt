@@ -1,7 +1,7 @@
 #BlueJ class context
 comment0.target=RuntimeExperiment
-comment0.text=\n\ Write\ a\ description\ of\ class\ RuntimeExperiment\ here.\n\n\ @author\ (your\ name)\n\ @version\ (a\ version\ number\ or\ a\ date)\n
+comment0.text=\n\ RuntimeExperiment\ determines\ the\ amount\ of\ time\ it\ takes\ for\ datasets\ of\ different\ sizes\ to\ run\n\n\ @author\ Emily\ Yin,\ Shirley\ Lei\n\ @version\ 4/24/2019\n
 comment1.params=args
 comment1.target=void\ main(java.lang.String[])
-comment1.text=\n\ Runs\ each\ sorting\ algorithm\ on\ the\ following\ sizes\ of\ data\:\ \n\ {20_000,\ 40_000,\ 60_000,\ 80_000,\ 100_000},\ and\ prints\ out\ runtimes\ \n\ for\ each\ algorithm\ on\ each\ size\ of\ data.\n\n\ @param\ \ args\ \ command\ line\ arguments,\ unused\ in\ this\ case\n\ \n
+comment1.text=\n\ Runs\ each\ sorting\ algorithm\ on\ the\ following\ sizes\ of\ data\:\ \n\ {20_000,\ 40_000,\ 60_000,\ 80_000,\ 100_000},\ and\ prints\ out\ runtimes\ \n\ for\ each\ algorithm\ on\ each\ size\ of\ data.\n\n\ @param\ args\ command\ line\ arguments,\ unused\ in\ this\ case\n\ \n
 numComments=2

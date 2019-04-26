@@ -1,14 +1,21 @@
 import java.io.IOException;
 
 /**
- * Write a description of class AnalysisEngine here.
+ * AnalysisEngine performs numerous analyses on the eviction dataset. 
  *
- * @author (your name)
- * @version (a version number or a date)
+ * @author Emily Yin, Shirley Lei
+ * @version 4/24/2019
  */
 public class AnalysisEngine {
+    /**
+     * Gets the median row number in a dataset with numerous rows. If there is an even number of rows, it
+     * takes the average of the two row numbers. If there is an odd number of rows, it takes the row number 
+     * of that row. 
+     *  
+     * @param subset the FilterableDataset 
+     * @return int the median row number 
+     */
     private static int getMedian(FilterableDataset subset) {
-
         int median; 
         int totalElt = subset.size();
         Sorting.selectionSort(subset, new EvictionComparator());
@@ -25,6 +32,11 @@ public class AnalysisEngine {
         return median;
     }
 
+    /**
+     * Driver method that reads from a dataset and performs analyses on certain fields in the dataset
+     *  
+     * @param args an array string (unused in this case)
+     */
     public static void main (String[] args) {
         try {
             Reader r = new Reader("eviction.csv", Integer.MAX_VALUE);
@@ -60,31 +72,30 @@ public class AnalysisEngine {
             // int totalNumElts = subset2016.size();
             // System.out.println("2016 dataset size: " + totalNumElts);
             // if (totalNumElts % 2 == 0) {
-                // String evenMedianCity1 = (subset2016.get(getMedian(subset2016))).getName();
-                // String evenMedianCity2 = (subset2016.get(getMedian(subset2016)-1)).getName();
-                // double evenMedianEvictionRate = (subset2016.get(getMedian(subset2016))).getDataValue("evictionRate");
-                // System.out.println("The two cities with median eviction rates are: " + evenMedianCity1 + " and " + evenMedianCity2 + "\n" + 
-                    // " with an average median rate of " + evenMedianEvictionRate);
+            // String evenMedianCity1 = (subset2016.get(getMedian(subset2016))).getName();
+            // String evenMedianCity2 = (subset2016.get(getMedian(subset2016)-1)).getName();
+            // double evenMedianEvictionRate = (subset2016.get(getMedian(subset2016))).getDataValue("evictionRate");
+            // System.out.println("The two cities with median eviction rates are: " + evenMedianCity1 + " and " + evenMedianCity2 + "\n" + 
+            // " with an average median rate of " + evenMedianEvictionRate);
             // } else {
-                // String oddMedianCity = (subset2016.get(getMedian(subset2016))).getName();
-                // double oddMedianEvictionRate = (subset2016.get(getMedian(subset2016))).getDataValue("evictionRate");
-                // System.out.println("The city with median eviction rate is: " + oddMedianCity + "\n" + 
-                    // " with a rate of " + oddMedianEvictionRate);
+            // String oddMedianCity = (subset2016.get(getMedian(subset2016))).getName();
+            // double oddMedianEvictionRate = (subset2016.get(getMedian(subset2016))).getDataValue("evictionRate");
+            // System.out.println("The city with median eviction rate is: " + oddMedianCity + "\n" + 
+            // " with a rate of " + oddMedianEvictionRate);
             // }
-            
+
             //4.
-            
+
             FilterableDataset subsetHighAsianPerc = fs.filterBy(new FilterToHighAsianPerc());
             //System.out.println(subsetLowEviction);
             Sorting.selectionSort(subsetHighAsianPerc, new AsianComparator());
             //System.out.println(subsetLowEviction); //? so many w zero -> cant test if method is right?
             System.out.println("5 cities in 2016 with highest Asian percentage:\n" 
-            + subsetHighAsianPerc.get(0) + "\n"
-            + subsetHighAsianPerc.get(1) + "\n"
-            + subsetHighAsianPerc.get(2) + "\n"
-            + subsetHighAsianPerc.get(3) + "\n" //? how to get range of rows rather than one at a time?/
-            + subsetHighAsianPerc.get(4) + "\n"); 
-
+                + subsetHighAsianPerc.get(0) + "\n"
+                + subsetHighAsianPerc.get(1) + "\n"
+                + subsetHighAsianPerc.get(2) + "\n"
+                + subsetHighAsianPerc.get(3) + "\n" //? how to get range of rows rather than one at a time?/
+                + subsetHighAsianPerc.get(4) + "\n"); 
 
         } catch(IOException e) {
             System.out.println(e);

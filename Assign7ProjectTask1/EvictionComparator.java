@@ -1,13 +1,17 @@
 import java.util.Comparator;
 /**
- * Write a description of class EvictionComparator here.
- *
- * @author (your name)
- * @version (a version number or a date)
+ * EvictionComparator compares two rows to determine whether the first row has a higher eviction rate than 
+ * the second row. 
+ * 
+ * @author Emily Yin, Shirley Lei
+ * @version 4/24/2019
  */
 public class EvictionComparator implements Comparator<Row> {
     /**
-    * //implements compare(), returns 0 or -1 or 1 finish this
+    * Implements Comparator to determine which row between two rows has a higher evictionRate.
+    * 
+    * @ param row1 row2 two rows in the dataset
+    * @ return int 0 if the two rows have the same eviction rate, 1 if row1 has a higher eviction rate
     */
   
   public int compare(Row row1, Row row2) {

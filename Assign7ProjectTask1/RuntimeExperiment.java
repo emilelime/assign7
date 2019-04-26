@@ -1,9 +1,9 @@
 import java.io.IOException;
 /**
- * Write a description of class RuntimeExperiment here.
+ * RuntimeExperiment determines the amount of time it takes for datasets of different sizes to run
  *
- * @author (your name)
- * @version (a version number or a date)
+ * @author Emily Yin, Shirley Lei
+ * @version 4/24/2019
  */
 public class RuntimeExperiment {
     private static final long NANOSECONDS_PER_SECOND = 1_000_000_000; // A billionth of a second (10^9)
@@ -13,21 +13,25 @@ public class RuntimeExperiment {
      * {20_000, 40_000, 60_000, 80_000, 100_000}, and prints out runtimes 
      * for each algorithm on each size of data.
      *
-     * @param  args  command line arguments, unused in this case
+     * @param args command line arguments, unused in this case
      * 
      */
     public static void main(String[] args) {
         try {
             Reader r = new Reader("eviction.csv", 100000);
             FilterableDataset fs = r.getDataset();
+            //int fssize = fs.size();
+            //System.out.println("size of fdb: " + fssize);
             //FilterableDataset subsetHighEviction = fs.filterBy(new FilterTo2016()).filterBy(new FilterToHighEvictionRate());
             long start = System.nanoTime();
-            //Sorting.selectionSort(subsetHighEviction, new EvictionComparator());
-            Sorting.mergeSort(fs, new EvictionComparator());
+            Sorting.selectionSort(fs, new EvictionComparator());
+            //Sorting.mergeSort(fs, new EvictionComparator());
             long end = System.nanoTime();
             long durationInNanoseconds = end - start;
-            double durationInSeconds = durationInNanoseconds/NANOSECONDS_PER_SECOND; //? why this so short even tho 3sec irl
-            System.out.println("Runtime of this sorting method was (seconds): " + durationInSeconds);
+            long durationInSeconds = durationInNanoseconds/NANOSECONDS_PER_SECOND;
+            //System.out.println("size of fdb: " + fssize);
+            System.out.println("Runtime of this sorting method was (ns): " + durationInNanoseconds);
+            //System.out.println("Runtime of this sorting method was (s): " + durationInSeconds);
         } catch(IOException e) {
             System.out.println(e);
         }
