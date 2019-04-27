@@ -1,6 +1,7 @@
 import java.io.IOException;
 /**
- * RuntimeExperiment determines the amount of time it takes for datasets of different sizes to run
+ * RuntimeExperiment tests the efficiency of two sorting algorithms (MergeSort and SelectionSort) 
+ * by determining the amount of time it takes for a dataset of various sizes to run.
  *
  * @author Emily Yin, Shirley Lei
  * @version 4/24/2019
@@ -9,8 +10,8 @@ public class RuntimeExperiment {
     private static final long NANOSECONDS_PER_SECOND = 1_000_000_000; // A billionth of a second (10^9)
     private static final long NANOSECONDS_PER_MILLISECOND = 1_000_000; // A millionth of a second (10^6)
     /**
-     * Runs each sorting algorithm on the following sizes of data: 
-     * {20_000, 40_000, 60_000, 80_000, 100_000}, and prints out runtimes 
+     * Runs each sorting algorithm 
+     * on the following sizes of data: {20_000, 40_000, 60_000, 80_000, 100_000}, and prints out runtimes 
      * for each algorithm on each size of data.
      *
      * @param args command line arguments, unused in this case
@@ -22,7 +23,6 @@ public class RuntimeExperiment {
             FilterableDataset fs = r.getDataset();
             //int fssize = fs.size();
             //System.out.println("size of fdb: " + fssize);
-            //FilterableDataset subsetHighEviction = fs.filterBy(new FilterTo2016()).filterBy(new FilterToHighEvictionRate());
             long start = System.nanoTime();
             Sorting.selectionSort(fs, new EvictionComparator());
             //Sorting.mergeSort(fs, new EvictionComparator());

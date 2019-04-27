@@ -11,7 +11,7 @@ public class FilterTo2016 implements FilterPredicate<Row> {
      * Determines whether the year in a row corresponds to year 2016. 
      *  
      * @param element the row to be filtered through for its year
-     * @return boolean true if the year is equal to the set year in this row
+     * @return boolean true if the year is equal to the set year in this row, false otherwise
      */
     public boolean apply(Row element) {
         return element.getYear()==YEAR;

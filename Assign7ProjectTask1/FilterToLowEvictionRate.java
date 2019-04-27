@@ -12,7 +12,7 @@ public class FilterToLowEvictionRate implements FilterPredicate<Row> {
      * Determines whether the eviction rate in a row is less than the threshold for a low eviction rate.
      *  
      * @param element the row to be filtered through for its eviction rate
-     * @return boolean true if the eviction rate is less than the set threshold in this given row
+     * @return boolean true if the eviction rate is less than the set threshold in this given row false otherwise
      */
     public boolean apply(Row element) {
         return element.getDataValue("evictionRate")<LOW_RATE;

@@ -3,5 +3,5 @@ comment0.target=FilterTo2016
 comment0.text=\n\ FilterTo2016\ filters\ the\ dataset\ to\ only\ information\ that\ corresponds\ to\ the\ year\ 2016.\ \n\n\ @author\ Emily\ Yin,\ Shirley\ Lei\n\ @version\ 4/24/2019\n
 comment1.params=element
 comment1.target=boolean\ apply(Row)
-comment1.text=\n\ Determines\ whether\ the\ year\ in\ a\ row\ corresponds\ to\ year\ 2016.\ \n\ \ \n\ @param\ element\ the\ row\ to\ be\ filtered\ through\ for\ its\ year\n\ @return\ boolean\ true\ if\ the\ year\ is\ equal\ to\ the\ set\ year\ in\ this\ row\n
+comment1.text=\n\ Determines\ whether\ the\ year\ in\ a\ row\ corresponds\ to\ year\ 2016.\ \n\ \ \n\ @param\ element\ the\ row\ to\ be\ filtered\ through\ for\ its\ year\n\ @return\ boolean\ true\ if\ the\ year\ is\ equal\ to\ the\ set\ year\ in\ this\ row,\ false\ otherwise\n
 numComments=2

@@ -1,7 +1,7 @@
 #BlueJ class context
 comment0.target=EvictionComparator
-comment0.text=\n\ EvictionComparator\ compares\ two\ rows\ to\ determine\ whether\ the\ first\ row\ has\ a\ higher\ eviction\ rate\ than\ \n\ the\ second\ row.\ \n\ \n\ @author\ Emily\ Yin,\ Shirley\ Lei\n\ @version\ 4/24/2019\n
+comment0.text=\n\ EvictionComparator\ compares\ two\ rows\ to\ determine\ which\ row\ has\ a\ higher\ eviction\ rate.\n\ \n\ @author\ Emily\ Yin,\ Shirley\ Lei\n\ @version\ 4/24/2019\n
 comment1.params=row1\ row2
 comment1.target=int\ compare(Row,\ Row)
-comment1.text=\n\ Implements\ Comparator\ to\ determine\ which\ row\ between\ two\ rows\ has\ a\ higher\ evictionRate.\n\ \n\ @\ param\ row1\ row2\ two\ rows\ in\ the\ dataset\n\ @\ return\ int\ 0\ if\ the\ two\ rows\ have\ the\ same\ eviction\ rate,\ 1\ if\ row1\ has\ a\ higher\ eviction\ rate\n
+comment1.text=\n\ Implements\ Comparator\ to\ determine\ which\ row\ between\ two\ rows\ has\ a\ higher\ eviction\ rate.\n\ \n\ @\ param\ row1\ row2\ two\ rows\ in\ the\ dataset\n\ @\ return\ int\ 0\ if\ the\ two\ rows\ have\ the\ same\ eviction\ rate,\ \n\ 1\ if\ row1\ has\ a\ higher\ eviction\ rate,\ -1\ if\ row2\ has\ a\ higher\ eviction\ rate\n
 numComments=2

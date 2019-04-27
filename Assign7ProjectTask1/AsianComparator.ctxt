@@ -1,7 +1,7 @@
 #BlueJ class context
 comment0.target=AsianComparator
-comment0.text=\n\ Write\ a\ description\ of\ class\ AsianComparator\ here.\n\n\ @author\ (your\ name)\n\ @version\ (a\ version\ number\ or\ a\ date)\n
+comment0.text=\n\ AsianComparator\ compares\ two\ rows\ in\ the\ data\ to\ determine\ which\ row\ has\ a\ higher\ percentage\ of\ Asians.\n\n\ @author\ Emily\ Yin,\ Shirley\ Lei\n\ @version\ April\ 26,\ 2019\n
 comment1.params=row1\ row2
 comment1.target=int\ compare(Row,\ Row)
-comment1.text=\n\ //implements\ compare(),\ returns\ 0\ or\ -1\ or\ 1\ finish\ this\n
+comment1.text=\n\ Implements\ Comparator\ to\ determine\ which\ row\ between\ two\ rows\ has\ a\ higher\ percentage\ of\ Asians.\n\ \n\ @\ param\ row1\ row2\ two\ rows\ in\ the\ dataset\n\ @\ return\ int\ 0\ if\ the\ two\ rows\ have\ the\ same\ Asian\ percentage,\ 1\ if\ row1\ has\ a\ higher\ Asian\ percentage,\n\ -1\ if\ row2\ has\ a\ higher\ Asian\ percentage.\n
 numComments=2

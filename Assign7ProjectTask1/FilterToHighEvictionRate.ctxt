@@ -3,5 +3,5 @@ comment0.target=FilterToHighEvictionRate
 comment0.text=\n\ FilterToHighEvictionRate\ can\ be\ used\ to\ filter\ a\ dataset\ by\ eviction\ rate\ for\ values\ that\ are\ greater\n\ than\ a\ set\ threshold.\ \n\n\ @author\ Emily\ Yin,\ Shirley\ Lei\n\ @version\ 4/24/2019\n
 comment1.params=element
 comment1.target=boolean\ apply(Row)
-comment1.text=\n\ Determines\ whether\ the\ eviction\ rate\ in\ a\ row\ is\ greater\ than\ the\ threshold\ for\ a\ high\ eviction\ rate.\n\ \ \n\ @param\ element\ the\ row\ to\ be\ filtered\ through\ for\ its\ eviction\ rate\n\ @return\ boolean\ true\ if\ the\ eviction\ rate\ is\ higher\ than\ the\ set\ threshold\ in\ this\ given\ row\n
+comment1.text=\n\ Determines\ whether\ the\ eviction\ rate\ in\ a\ row\ is\ greater\ than\ the\ threshold\ for\ a\ high\ eviction\ rate.\n\ \ \n\ @param\ element\ the\ row\ to\ be\ filtered\ through\ for\ its\ eviction\ rate\n\ @return\ boolean\ true\ if\ the\ eviction\ rate\ is\ higher\ than\ the\ set\ threshold\ in\ this\ given\ row\ false\ otherwise\n
 numComments=2

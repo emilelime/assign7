@@ -6,5 +6,5 @@ comment1.target=int\ getMedian(FilterableDataset)
 comment1.text=\n\ Gets\ the\ median\ row\ number\ in\ a\ dataset\ with\ numerous\ rows.\ If\ there\ is\ an\ even\ number\ of\ rows,\ it\n\ takes\ the\ average\ of\ the\ two\ row\ numbers.\ If\ there\ is\ an\ odd\ number\ of\ rows,\ it\ takes\ the\ row\ number\ \n\ of\ that\ row.\ \n\ \ \n\ @param\ subset\ the\ FilterableDataset\ \n\ @return\ int\ the\ median\ row\ number\ \n
 comment2.params=args
 comment2.target=void\ main(java.lang.String[])
-comment2.text=\n\ Driver\ method\ that\ reads\ from\ a\ dataset\ and\ performs\ analyses\ on\ certain\ fields\ in\ the\ dataset\n\ \ \n\ @param\ args\ an\ array\ string\ (unused\ in\ this\ case)\n
+comment2.text=\n\ Driver\ method\ that\ reads\ from\ a\ dataset\ and\ performs\ analyses\ on\ certain\ fields\ in\ the\ dataset\n\ \ \n\ @param\ args\ command\ line\ array\ string\ (unused\ in\ this\ case)\n
 numComments=3
